@@ -1,0 +1,21 @@
+class Solution {
+  public:
+    int kthMissing(vector<int> &arr, int k) {
+        // Your code goes here
+    int miss = 0; 
+    int curr = 1;
+    int i = 0;
+    
+    while (true) {
+        if (i < arr.size() && arr[i] == curr) {
+            i++; 
+        } else {
+            miss++;
+            if (miss == k) {
+                return curr; 
+            }
+        }
+        curr++;
+    }
+    }
+};
